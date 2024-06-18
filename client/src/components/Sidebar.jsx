@@ -58,8 +58,15 @@ const NavText = styled.div`
    text-decoration: none;
 `;
 
-const Sidebar = () => {
+const menuItems = [
+    {
+      link: "/",
+      name: "Dashboard",
+      icon: <HomeRounded />,
+    },
+  ];
 
+const Sidebar = () => {
     return ( <MenuContainer>
         <Flex>
          <Logo>
