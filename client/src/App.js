@@ -5,13 +5,18 @@ import Sidebar from "./components/Sidebar";
 import { BrowserRouter } from "react-router-dom";
 
 const Container = styled.div`
-
 display: flex; 
 background: ${({ theme }) => theme.bg};
 width: 100%;
 height: 100vh;
 overflow-x: hidden;
 overflow-y: hidden;
+`;
+
+const Frame = styled.div`
+  display: flex;
+  flex-decoration: column;
+  flex: 3;
 `;
 
 function App() { 
@@ -24,7 +29,7 @@ function App() {
       <BrowserRouter>
         <Container>
           <Sidebar />
-          Podstream
+          <Frame>Podstream</Frame>
         </Container>
       </BrowserRouter>
     </ThemeProvider>
