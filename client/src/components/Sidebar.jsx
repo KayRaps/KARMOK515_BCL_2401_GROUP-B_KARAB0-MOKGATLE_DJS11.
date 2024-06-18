@@ -27,7 +27,12 @@ const Logo = styled.div`
    font-size: 20px;
    margin: 16px 0px;
 `;
-const Close = styled.div``;
+const Close = styled.div`
+   display: none;
+   @media (max-width: 1100px) {
+   display: block;
+   }
+`;
 const Elements = styled.div``;
 const NavText = styled.div``;
 
