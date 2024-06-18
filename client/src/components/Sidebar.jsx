@@ -34,7 +34,9 @@ const Close = styled.div`
    }
 `;
 const Elements = styled.div``;
-const NavText = styled.div``;
+const NavText = styled.div`
+   padding: 12px 0px;
+`;
 
 const Sidebar = () => {
 
