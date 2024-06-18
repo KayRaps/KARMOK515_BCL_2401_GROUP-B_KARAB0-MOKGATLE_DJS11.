@@ -18,7 +18,15 @@ const MenuContainer = styled.div`
            transition: 0.3s ease-in-out;
         }   
 `;
-const Logo = styled.div``;
+const Logo = styled.div`
+   color: ${({ theme }) => theme.primary};
+   display: flex;
+   align-items: center;
+   gap: 6px;
+   font-weight: bold;
+   font-size: 20px;
+   margin: 16px 0px;
+`;
 const Close = styled.div``;
 const Elements = styled.div``;
 const NavText = styled.div``;
