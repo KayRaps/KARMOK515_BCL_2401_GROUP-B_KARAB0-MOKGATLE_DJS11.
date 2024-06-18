@@ -55,6 +55,7 @@ const Elements = styled.div`
 `;
 const NavText = styled.div`
    padding: 12px 0px;
+   text-decoration: none;
 `;
 
 const Sidebar = () => {
