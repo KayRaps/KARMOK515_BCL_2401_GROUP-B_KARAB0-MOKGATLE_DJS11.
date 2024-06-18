@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 
 const Container = styled.div`
 display: flex; 
-background: ${({ theme }) => theme.bg};
+background: ${({ theme }) => theme.bgLight};
 width: 100%;
 height: 100vh;
 overflow-x: hidden;
