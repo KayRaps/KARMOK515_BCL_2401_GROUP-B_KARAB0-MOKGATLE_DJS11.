@@ -48,14 +48,21 @@ const Elements = styled.div`
    gap: 12px;
    cursor: pointer;
    color: ${({ theme }) => theme.text_secondary};
-   width: 100%;
+   text decoration: none !important;
    &:hover {
-     background-color: ${({ theme }) => theme.text_primary};   
+     background-color: ${({ theme }) => theme.text_primary + 50};   
    }
 `;
 const NavText = styled.div`
    padding: 12px 0px;
-   text-decoration: none;
+   text decoration: none !important;
+`;
+
+const HR = styled.div`
+   width: 100%;
+   height: 1px;
+   background-color: ${({ theme }) => theme.text_secondary};
+   margin: 10px 0px;
 `;
 
 const menuItems = [
@@ -120,9 +127,8 @@ const Sidebar = () => {
                 <NavText>{item.name}</NavText>
              </Elements>
             </Link> 
-
         ))}
-       
+        <HR />
        </MenuContainer>
    );
 };
