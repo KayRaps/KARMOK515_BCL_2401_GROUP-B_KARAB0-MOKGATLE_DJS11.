@@ -121,14 +121,20 @@ const Sidebar = () => {
         </Close>
         </Flex>
         {menuItems.map((item) => (
-             <Link to={item.link}>
+             <Link to={item.link} style={{ textDecoration: "none"}}>
              <Elements>
                 {item.icon}
                 <NavText>{item.name}</NavText>
              </Elements>
             </Link> 
-        ))}
+        ))}  
         <HR />
+        {button.map((item) => (
+             <Elements onClick={item.fun}>
+                {item.icon}
+                <NavText>{item.name}</NavText>
+             </Elements>
+        ))}
        </MenuContainer>
    );
 };
