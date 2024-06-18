@@ -33,7 +33,20 @@ const Close = styled.div`
    display: block;
    }
 `;
-const Elements = styled.div``;
+const Elements = styled.div`
+   padding: 4px 16px;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 12px;
+   cursor: pointer;
+   color: ${({ theme }) => theme.text_secondary};
+   width: 100%;
+   &:hover {
+     background-color: ${({ theme }) => theme.text_primary};   
+   }
+`;
 const NavText = styled.div`
    padding: 12px 0px;
 `;
