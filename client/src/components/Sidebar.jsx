@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { HomeRounded, CloseRounded } from "@mui/icons-material";
+import { HomeRounded, CloseRounded, UploadRounded, SearchRounded, FavoriteRounded, LightModeRounded, LogoutRounded } from "@mui/icons-material";
 import LogoImage from "../Images/Logo.png"
 import { Link } from "react-router-dom";
 
@@ -64,6 +64,37 @@ const menuItems = [
       name: "Dashboard",
       icon: <HomeRounded />,
     },
+
+    {
+      link: "/search",
+      name: "Search",
+      icon: <SearchRounded />,
+    },
+
+    {
+      link: "/favourites",
+      name: "Favourites",
+      icon: <FavoriteRounded />,
+    },
+
+    {
+      link: "/upload",
+      name: "Upload",
+      icon: <UploadRounded />,
+    },
+    
+    {
+      link: "/light mode",
+      name: "Ligh Mmode",
+      icon: <LightModeRounded />,
+    },
+      
+    {
+      link: "/log out",
+      name: "Log Out",
+      icon: <LogoutRounded />,
+    },
+
   ];
 
 const Sidebar = () => {
