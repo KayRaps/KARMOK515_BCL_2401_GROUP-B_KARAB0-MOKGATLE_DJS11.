@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from "react"; 
+import styled, {ThemeProvider} from "styled-components"
+import {lightTheme, darkTheme} from "./utils/Themes"
+import Sidebar from "./components/Sidebar";
 
-function App() {
+const Container = styled.div`
+
+display: flex; 
+background: ${({ theme }) => theme.bg};
+width: 100%;
+height: 100vh;
+overflow-x: hidden;
+overflow-y: hidden;
+`;
+
+function App() { 
+  //Hooks
+
+  const [darkMode,setDarkMode] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+      <Container>
+        <Sidebar />
+        Podstream</Container>
+    </ThemeProvider>
+  
+  
   );
+
 }
 
 export default App;
