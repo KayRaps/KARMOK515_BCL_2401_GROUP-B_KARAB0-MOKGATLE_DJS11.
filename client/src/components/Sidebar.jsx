@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { HomeRounded, CloseRounded } from "@mui/icons-material";
 import LogoImage from "../Images/Logo.png"
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const MenuContainer = styled.div`
     flex: 0.5;
@@ -59,7 +59,7 @@ const NavText = styled.div`
 
 const Sidebar = () => {
 
-    return <MenuContainer>
+    return ( <MenuContainer>
         <Flex>
          <Logo>
             <Image src={LogoImage} />
@@ -74,9 +74,9 @@ const Sidebar = () => {
             <HomeRounded />
             <NavText>Dashboard</NavText>
          </Elements>
-        </Link>
-        
-       </MenuContainer>;
+        </Link> 
+       </MenuContainer>
+   );
 };
 
 export default Sidebar;
