@@ -77,24 +77,29 @@ const menuItems = [
       icon: <FavoriteRounded />,
     },
 
-    {
-      link: "/upload",
-      name: "Upload",
-      icon: <UploadRounded />,
-    },
-    
-    {
-      link: "/light mode",
-      name: "Ligh Mmode",
-      icon: <LightModeRounded />,
-    },
-      
-    {
-      link: "/log out",
-      name: "Log Out",
-      icon: <LogoutRounded />,
-    },
+  ];
 
+  const button = [
+    {
+        fun: () => console.log("Upload"),
+        name: "Upload",
+        icon: <UploadRounded />,
+      },
+      
+      {
+        
+        fun: () => console.log("Light Mode Toggled"),
+        name: "Ligh Mmode",
+        icon: <LightModeRounded />,
+      },
+        
+      {
+        
+        fun: () => console.log("Log Out"),
+        name: "Log Out",
+        icon: <LogoutRounded />,
+      },
+  
   ];
 
 const Sidebar = () => {
@@ -108,12 +113,16 @@ const Sidebar = () => {
           <CloseRounded />
         </Close>
         </Flex>
-        <Link to="/">
-         <Elements>
-            <HomeRounded />
-            <NavText>Dashboard</NavText>
-         </Elements>
-        </Link> 
+        {menuItems.map((item) => (
+             <Link to={item.link}>
+             <Elements>
+                {item.icon}
+                <NavText>{item.name}</NavText>
+             </Elements>
+            </Link> 
+
+        ))}
+       
        </MenuContainer>
    );
 };
