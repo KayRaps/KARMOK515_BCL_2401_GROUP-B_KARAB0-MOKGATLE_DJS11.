@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { HomeRounded, CloseRounded } from "@mui/icons-material";
+import LogoImage from "../Images/Logo.png"
 
 const MenuContainer = styled.div`
     flex: 0.5;
@@ -27,6 +28,9 @@ const Logo = styled.div`
    font-weight: bold;
    font-size: 20px;
    margin: 16px 0px;
+`;
+const Image = styled.img`
+   height: 40px;
 `;
 const Close = styled.div`
    display: none;
@@ -56,7 +60,10 @@ const Sidebar = () => {
 
     return <MenuContainer>
         <Flex>
-         <Logo>Podstream</Logo>
+         <Logo>
+            <Image src={LogoImage} />
+            Podstream
+        </Logo>
         <Close>
           <CloseRounded />
         </Close>
