@@ -16,7 +16,7 @@ const MenuContainer = styled.div`
            z-index: 1000;
            width: 100%;
            max-width: 250px;
-           left: ${({ setMenuOpen }) => (setMenuOpen ? "0" : "-100%")};
+           left: ${({ menuOpen }) => (menuOpen ? "0" : "-100%")};
            transition: 0.3s ease-in-out;
         }   
     
@@ -75,7 +75,7 @@ const HR = styled.div`
 
 
 
-const Sidebar = ({ setMenuOpen, setDarkMode, darkMode }) => {
+const Sidebar = ({ menuOpen, setMenuOpen, setDarkMode, darkMode }) => {
     const menuItems = [
         {
           link: "/",
@@ -120,18 +120,18 @@ const Sidebar = ({ setMenuOpen, setDarkMode, darkMode }) => {
       
       ];
     return ( 
-    <MenuContainer setMenuOpen={setMenuOpen}>
+    <MenuContainer menuOpen={menuOpen}>
         <Flex>
          <Logo>
             <Image src={LogoImage} />
             Podstream
         </Logo>
-        <Close>
+        <Close onClick={() => setMenuOpen(false)}>
           <CloseRounded />
         </Close>
         </Flex>
         {menuItems.map((item) => (
-             <Link to={item.link} style={{ textDecoration: "none"}}>
+            <Link to={item.link} style={{ textDecoration: "none"}}>
              <Elements>
                 {item.icon}
                 <NavText>{item.name}</NavText>
