@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { HomeRounded, CloseRounded, UploadRounded, SearchRounded, FavoriteRounded, LightModeRounded, DarkModeRounded, LogoutRounded } from "@mui/icons-material";
+import { HomeRounded, CloseRounded, UploadRounded, SearchRounded, FavoriteRounded, LightModeRounded, DarkModeRounded, LogoutRounded, CloudUploadRounded } from "@mui/icons-material";
 import LogoImage from "../Images/Logo.png"
 import { Link } from "react-router-dom";
 
@@ -25,10 +25,10 @@ const Flex = styled.div`
    display: flex;
    flex-direction: row;
    align-items: center;
-   justify-content: center;
+   justify-content: space-between;
+   padding: 0px 12px;
 `;
 const Logo = styled.div`
-   width: 100%;
    color: ${({ theme }) => theme.primary};
    display: flex;
    align-items: center;
@@ -69,7 +69,7 @@ const NavText = styled.div`
 const HR = styled.div`
    width: 100%;
    height: 1px;
-   background-color: ${({ theme }) => theme.text_secondary};
+   background-color: ${({ theme }) => theme.text_secondary + 50};
    margin: 10px 0px;
 `;
 
@@ -101,7 +101,7 @@ const Sidebar = ({ menuOpen, setMenuOpen, setDarkMode, darkMode }) => {
         {
             fun: () => console.log("Upload"),
             name: "Upload",
-            icon: <UploadRounded />,
+            icon: <CloudUploadRounded />,
           },
           
           {
@@ -124,7 +124,7 @@ const Sidebar = ({ menuOpen, setMenuOpen, setDarkMode, darkMode }) => {
         <Flex>
          <Logo>
             <Image src={LogoImage} />
-            Podstream
+            Pod-Kast
         </Logo>
         <Close onClick={() => setMenuOpen(false)}>
           <CloseRounded />
