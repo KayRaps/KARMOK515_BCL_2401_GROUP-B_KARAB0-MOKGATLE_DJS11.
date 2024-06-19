@@ -1,6 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { HomeRounded, CloseRounded, UploadRounded, SearchRounded, FavoriteRounded, LightModeRounded, DarkModeRounded, LogoutRounded, CloudUploadRounded } from "@mui/icons-material";
+import { 
+   HomeRounded, 
+   CloseRounded,  
+   SearchRounded, 
+   FavoriteRounded, 
+   LightModeRounded, 
+   LogoutRounded, 
+   DarkModeRounded, 
+   CloudUploadRounded } from "@mui/icons-material";
 import LogoImage from "../Images/Logo.png"
 import { Link } from "react-router-dom";
 
