@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { HomeRounded, CloseRounded, UploadRounded, SearchRounded, FavoriteRounded, LightModeRounded, LogoutRounded } from "@mui/icons-material";
+import { HomeRounded, CloseRounded, UploadRounded, SearchRounded, FavoriteRounded, LightModeRounded, DarkModeRounded, LogoutRounded } from "@mui/icons-material";
 import LogoImage from "../Images/Logo.png"
 import { Link } from "react-router-dom";
 
@@ -65,52 +65,54 @@ const HR = styled.div`
    margin: 10px 0px;
 `;
 
-const menuItems = [
-    {
-      link: "/",
-      name: "Dashboard",
-      icon: <HomeRounded />,
-    },
 
-    {
-      link: "/search",
-      name: "Search",
-      icon: <SearchRounded />,
-    },
 
-    {
-      link: "/favourites",
-      name: "Favourites",
-      icon: <FavoriteRounded />,
-    },
-
-  ];
-
-  const button = [
-    {
-        fun: () => console.log("Upload"),
-        name: "Upload",
-        icon: <UploadRounded />,
-      },
+const Sidebar = ({ setMenuOpen, setDarkMode, darkMode }) => {
+    const menuItems = [
+        {
+          link: "/",
+          name: "Dashboard",
+          icon: <HomeRounded />,
+        },
+    
+        {
+          link: "/search",
+          name: "Search",
+          icon: <SearchRounded />,
+        },
+    
+        {
+          link: "/favourites",
+          name: "Favourites",
+          icon: <FavoriteRounded />,
+        },
+    
+      ];
+    
+      const button = [
+        {
+            fun: () => console.log("Upload"),
+            name: "Upload",
+            icon: <UploadRounded />,
+          },
+          
+          {
+            
+            fun: () => setDarkMode(!darkMode),
+            name: darkMode ? "Light Mode" : "Dark Mode",
+            icon: darkMode ? <LightModeRounded /> : <DarkModeRounded />,
+          },
+            
+          {
+            
+            fun: () => console.log("Log Out"),
+            name: "Log Out",
+            icon: <LogoutRounded />,
+          },
       
-      {
-        
-        fun: () => console.log("Light Mode Toggled"),
-        name: "Ligh Mmode",
-        icon: <LightModeRounded />,
-      },
-        
-      {
-        
-        fun: () => console.log("Log Out"),
-        name: "Log Out",
-        icon: <LogoutRounded />,
-      },
-  
-  ];
-
-const Sidebar = () => {
-    return ( <MenuContainer>
+      ];
+    return ( 
+    <MenuContainer>
         <Flex>
          <Logo>
             <Image src={LogoImage} />
