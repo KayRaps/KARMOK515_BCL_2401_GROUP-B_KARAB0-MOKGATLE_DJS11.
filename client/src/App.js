@@ -3,6 +3,7 @@ import styled, {ThemeProvider} from "styled-components"
 import {lightTheme, darkTheme} from "./utils/Themes"
 import Sidebar from "./components/Sidebar";
 import { BrowserRouter } from "react-router-dom";
+import NavBar from "./components/NavBar";
 
 const Container = styled.div`
 display: flex; 
@@ -35,8 +36,11 @@ function App() {
             setMenuOpen={setMenuOpen} 
             setDarkMode={setDarkMode} 
             darkMode={darkMode}
-            />
-          <Frame>Podstream</Frame>
+          />
+          <Frame>
+            <NavBar  menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            Podstream
+          </Frame>
         </Container>
       </BrowserRouter>
     </ThemeProvider>
