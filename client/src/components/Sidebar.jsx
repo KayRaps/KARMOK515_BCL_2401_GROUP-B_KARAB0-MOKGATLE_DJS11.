@@ -120,7 +120,7 @@ const Sidebar = ({ setMenuOpen, setDarkMode, darkMode }) => {
       
       ];
     return ( 
-    <MenuContainer>
+    <MenuContainer setMenuOpen={setMenuOpen}>
         <Flex>
          <Logo>
             <Image src={LogoImage} />
