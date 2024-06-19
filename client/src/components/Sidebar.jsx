@@ -8,9 +8,9 @@ import {
    LightModeRounded, 
    LogoutRounded, 
    DarkModeRounded, 
-   CloudUploadRounded } from "@mui/icons-material";
-import LogoImage from "../Images/Logo.png"
-import { Link } from "react-router-dom";
+   CloudUploadRounded} from "@mui/icons-material";
+import LogoImage from "../Images/Logo.png";
+import { Link } from "react-router-dom"
 
 const MenuContainer = styled.div`
     flex: 0.5;
@@ -71,7 +71,7 @@ const Elements = styled.div`
 `;
 const NavText = styled.div`
    padding: 12px 0px;
-   text decoration: none !important;
+   text-decoration: none !important;
 `;
 
 const HR = styled.div`
@@ -127,12 +127,12 @@ const Sidebar = ({ menuOpen, setMenuOpen, setDarkMode, darkMode }) => {
           },
       
       ];
-    return ( 
-    <MenuContainer menuOpen={menuOpen}>
+      return ( 
+      <MenuContainer menuOpen={menuOpen}>
         <Flex>
          <Logo>
             <Image src={LogoImage} />
-            Pod-Kast
+            POD-KAST
         </Logo>
         <Close onClick={() => setMenuOpen(false)}>
           <CloseRounded />
@@ -148,10 +148,10 @@ const Sidebar = ({ menuOpen, setMenuOpen, setDarkMode, darkMode }) => {
         ))}  
         <HR />
         {button.map((item) => (
-             <Elements onClick={item.fun}>
+            <Elements onClick={item.fun}>
                 {item.icon}
                 <NavText>{item.name}</NavText>
-             </Elements>
+            </Elements>
         ))}
        </MenuContainer>
    );
