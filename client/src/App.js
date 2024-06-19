@@ -15,17 +15,16 @@ overflow-y: hidden;
 `;
 
 const Frame = styled.div`
-  display: flex;
+
   flex-decoration: column;
   flex: 3;
 `;
 
 function App() { 
-  //Hooks
 
+  //Hooks
   const [darkMode,setDarkMode] = useState(true);
   const [menuOpen,setMenuOpen] = useState(true);
-
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
@@ -43,9 +42,7 @@ function App() {
           </Frame>
         </Container>
       </BrowserRouter>
-    </ThemeProvider>
-  
-  
+    </ThemeProvider>  
   );
 
 }
