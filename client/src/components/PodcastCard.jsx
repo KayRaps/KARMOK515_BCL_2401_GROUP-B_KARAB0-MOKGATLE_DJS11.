@@ -69,7 +69,13 @@ const CardInformation = styled.div`
    width: 100%;
 `;
 
-const MainInfo = styled.div``;
+const MainInfo = styled.div`
+   display: flex;
+   width: 100%;
+   flex-direction: column;
+   justify-content: flex-start;
+   gap: 4px;
+`;
 
 const Title = styled.div``;
 
