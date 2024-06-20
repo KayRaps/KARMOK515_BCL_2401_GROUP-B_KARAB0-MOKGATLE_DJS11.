@@ -132,7 +132,7 @@ const PodcastCard = () => {
     <Card>
       <Top>
         <Favorite>
-          <FavoriteIcon />
+          <FavoriteIcon style={{ width: "16px", height: "16px"}} />
         </Favorite>
         <CardImage src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/678a2fd4-c856-4f8f-8d77-35e5f8c5cdba/b9664c31-b383-4887-9d2a-1cae3923ace6.png" />
       </Top>
