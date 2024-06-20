@@ -107,7 +107,11 @@ const CreatersInfo = styled.div`
    margin-top: 6px;
 `;
 
-const Creator = styled.div``;
+const Creator = styled.div`
+   display: flex;
+   gap: 8px;
+   align-items: center;
+`;
 
 const CreatorName = styled.div``;
 
