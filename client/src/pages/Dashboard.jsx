@@ -8,6 +8,7 @@ const DashboardMain = styled.div`
   height: 100%;
   overflow-y: scroll;
   display: flex;
+  flex-direction: column;
   gap: 20px;
   @media (max-width: 768px) {
     padding: 6px 10px;
