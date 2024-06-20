@@ -29,10 +29,17 @@ const Topic = styled.div`
   justify-content: space-between;
   align-items: center;
   @media (max-width: 768px) {
-    font-size: 18px;
+    font-size: 14px;
   }
 `;
-const Span = styled.div``;
+const Span = styled.div`
+    color: ${({ theme }) => theme.primary};
+    font-size: 16px;
+    font-weight: 400;
+     @media (max-width: 768px) {
+       font-size: 16px;
+  }
+`;
 const Podcasts = styled.div``;
 
 const Dashboard = () => {
