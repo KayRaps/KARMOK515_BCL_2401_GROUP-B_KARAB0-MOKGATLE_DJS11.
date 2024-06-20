@@ -149,7 +149,7 @@ const PodcastCard = () => {
           </Description>
           <CreatersInfo>
             <Creator>
-              <Avatar>R</Avatar>
+              <Avatar style={{ height: "26px" }}>R</Avatar>
               <CreatorName>Rishav</CreatorName>
             </Creator>
             <Views>• 12 views</Views>
