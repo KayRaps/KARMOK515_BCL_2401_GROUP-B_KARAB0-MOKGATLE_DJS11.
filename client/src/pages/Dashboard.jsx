@@ -21,7 +21,10 @@ const FilterContainer = styled.div`
   border-radius: 10px;
   padding: 20px 30px;
 `;
-const Topic = styled.div``;
+const Topic = styled.div`
+  color: ${({ theme }) => theme.text_primary};
+
+`;
 const Span = styled.div``;
 const Podcasts = styled.div``;
 
