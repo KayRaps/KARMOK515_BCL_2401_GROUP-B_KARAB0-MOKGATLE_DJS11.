@@ -113,9 +113,19 @@ const Creator = styled.div`
    align-items: center;
 `;
 
-const CreatorName = styled.div``;
+const CreatorName = styled.div`
+   font-size: 12px;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overfloq: ellipsis;
+   color: ${({ theme }) => theme.text_secondary};
+`;
 
-const Views = styled.div``;
+const Views = styled.div`
+   font-size: 10px;
+   color: ${({ theme }) => theme.text_secondary};
+   width: max-content;
+`;
 
 const PodcastCard = () => {
   return (
