@@ -47,13 +47,31 @@ const Dashboard = () => {
         <FilterContainer>
             <Topic>
                 Most Popular
-                <Link>
+                <Link 
+                  to={`/showpodcasts/mostpopular`}
+                  style={{ textDecoration: "none"}}
+                >
+                  <Span>Show All</Span>
+                </Link>   
+            </Topic>
+            <Podcasts>Hey</Podcasts>
+        </FilterContainer>
+
+        <FilterContainer>
+            <Topic>
+                Comedy
+                <Link 
+                  to={`/showpodcasts/comedy`}
+                  style={{ textDecoration: "none" }}
+                >
                   <Span>Show All</Span>
                 </Link>   
             </Topic>
             <Podcasts>Hey</Podcasts>
         </FilterContainer>
     </DashboardMain>;
+
+    
 };
 
 export default Dashboard;
