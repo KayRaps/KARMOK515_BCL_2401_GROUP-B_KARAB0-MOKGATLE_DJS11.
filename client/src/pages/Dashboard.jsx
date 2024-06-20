@@ -14,7 +14,13 @@ const DashboardMain = styled.div`
     padding: 6px 10px;
 }
 `;
-const FilterContainer = styled.div``;
+const FilterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: ${({ theme }) => theme.bg};
+  border-radius: 10px;
+  padding: 20px 30px;
+`;
 const Topic = styled.div``;
 const Span = styled.div``;
 const Podcasts = styled.div``;
