@@ -88,9 +88,24 @@ const Title = styled.div`
    color: ${({ theme }) => theme.text_primary};
 `;
 
-const Description = styled.div``;
+const Description = styled.div`
+   overflow: hidden;
+   display: -webkit-box;
+   max-width: 100%;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   text-overflow: ellipsis;
+   color: ${({ theme }) => theme.text_secondary};
+   font-size: 12px;
+`;
 
-const CreatersInfo = styled.div``;
+const CreatersInfo = styled.div`
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 8px;
+   margin-top: 6px;
+`;
 
 const Creator = styled.div``;
 
