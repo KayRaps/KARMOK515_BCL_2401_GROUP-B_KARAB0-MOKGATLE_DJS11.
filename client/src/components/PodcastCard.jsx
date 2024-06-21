@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Avatar from "@mui/material/Avatar";
 import { IconButton } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import HeadphonesIcon from "@mui/icons-material/Headphones";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 const PlayIcon = styled.div`
    padding: 10px;
@@ -41,6 +43,10 @@ const Card = styled.div`
     transition: all 0.4s ease-in-out;
     box-shadow: 0 0 18px 0 rgba(0, 0, 0.3);
     filter: brightness(1.3);
+  }
+
+  &:hover ${PlayIcon}{
+    display: flex;
   }
 `;
 
@@ -101,7 +107,6 @@ const Title = styled.div`
    max-width: 100%;
    -webkit-line-clamp: 2;
    -webkit-box-orient: vertical;
-   overflow: hidden;
    text-overflow: ellipsis;
    color: ${({ theme }) => theme.text_primary};
 `;
@@ -135,7 +140,7 @@ const CreatorName = styled.div`
    font-size: 12px;
    overflow: hidden;
    white-space: nowrap;
-   text-overfloq: ellipsis;
+   text-overflow: ellipsis;
    color: ${({ theme }) => theme.text_secondary};
 `;
 
@@ -168,7 +173,7 @@ const PodcastCard = () => {
           </Description>
           <CreatersInfo>
             <Creator>
-              <Avatar style={{ height: "26px" }}>R</Avatar>
+              <Avatar style={{ width: "26px", height: "26px" }}>R</Avatar>
               <CreatorName>Rishav</CreatorName>
             </Creator>
             <Views>• 12 views</Views>
