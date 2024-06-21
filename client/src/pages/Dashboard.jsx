@@ -42,8 +42,9 @@ const Span = styled.div`
   }
 `;
 const Podcasts = styled.div`
+   width: 100%;
    display: flex;
-   flexwrap: wrap;
+   flex-wrap: wrap;
    gap: 14px;
    padding: 18px 6px;
    @media (max-width: 550px) {
