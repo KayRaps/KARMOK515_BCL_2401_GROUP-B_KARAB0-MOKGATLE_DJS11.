@@ -3,8 +3,8 @@ import PodcastCard from "../components/PodcastCard";
 import styled from "styled-components";
 
 const Container = styled.div``;
-const Container = styled.div``;
-const Container = styled.div``;
+const Topic = styled.div``;
+const FavouriteContainer = styled.div``;
 
 const Favourites = () => {
     return <Container>
