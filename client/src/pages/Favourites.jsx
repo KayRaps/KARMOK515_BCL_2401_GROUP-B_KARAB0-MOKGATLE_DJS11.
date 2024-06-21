@@ -10,9 +10,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  @media (max-width: 768px) {
-    padding: 6px 10px;
-  }
 `;
 const Topic = styled.div``;
 const FavouriteContainer = styled.div``;
